@@ -1,1 +1,49 @@
 
+SQL / Assignment-1:
+
+Q-1:
+SELECT InvoiceId, CustomerId, Total
+FROM invoices
+WHERE CustomerId AND Total
+ORDER BY CustomerId, Total
+;
+
+Q-2:
+SELECT InvoiceId, CustomerId, Total
+FROM invoices
+WHERE CustomerId AND Total
+ORDER BY Total, CustomerId DESC
+;
+
+Q-3:
+In the first query, it is easy to count the total bill of every customer. But in the second query, it is just sorted by invoice amount and this this type of filtering is neither useful to the customer nor to the workplace.
+
+Q-4:
+SELECT *
+FROM invoices
+WHERE Total >= 10
+ORDER BY Total DESC
+LIMIT 10
+;
+
+Q-5:
+SELECT *
+FROM invoices
+WHERE Total <= 10
+ORDER BY Total DESC
+LIMIT 5
+;
+
+Q-6:
+SELECT name
+FROM tracks
+WHERE name LIKE 'B%s'
+;
+
+Q-7:
+SELECT *
+FROM invoices
+WHERE BillingCountry IN ("USA", "Germany", "Norway", "Canada")
+AND InvoiceDate BETWEEN "2010-01-01" AND "2011-01-01"
+ORDER BY InvoiceDate DESC
+;
